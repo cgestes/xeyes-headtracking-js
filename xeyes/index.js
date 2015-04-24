@@ -73,8 +73,22 @@ function showProbabilityCanvas() {
   } else {
     debugCanvas.style.display = 'none';
   }
-}
+};
 
 function showAll() {
   $('#div1, #div2').toggle();
+};
+
+var clear = 1;
+function bgToggle() {
+  if (clear) {
+    $('body')
+      .css('background', '#000')
+      .css('color', '#FFF');
+  } else {
+    $('body')
+      .css('background', '#FFF')
+      .css('color', '#000');
+  }
+  clear = !clear;
 };
