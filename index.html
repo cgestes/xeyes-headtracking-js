@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>facetracking</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<meta charset="utf-8">
+		<link href="./index.css" rel="stylesheet" type="text/css">
+
+	</head>
+	<body>
+		<script src="./headtrackr.js"></script>
+
+		<div id="wrap">
+			<div class="eye">
+				<div class="iris"></div>
+			</div>
+			<div class="eye">
+				<div class="iris"></div>
+			</div>
+		</div>
+		<div id="div1" style='position: relative;'>
+			<canvas id="compare" width="320" height="240" style="display:none"></canvas>
+			<video id="vid" autoplay loop width="320" height="240"></video>
+			<canvas id="overlay" width="320" height="240"></canvas>
+			<canvas id="debug" width="320" height="240"></canvas>
+		</div>
+		<div id="div2">
+			<p id='gUMMessage'></p>
+			<p>Status : <span id='headtrackerMessage'></span></p>
+			<p><input type="button" onclick="htracker.stop();htracker.start();" value="reinitiate facedetection"></input>
+			<br/><br/>
+			<input type="checkbox" onclick="showProbabilityCanvas()" value="asdfasd"></input>Show probability-map</p>
+		</div>
+		<div id='div3'>
+			<input type="checkbox" onclick="showAll()" value="asdfasd"></input>Stealth</p>
+		</div>
+		<script src="./index.js"></script>
+		<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="./jquery.xeyes-2.0.js">
+		</script>
+		<script>
+			$('.iris').xeyes({position: {x: 0, y:0}});
+		</script>
+
+	</body>
+</html>
