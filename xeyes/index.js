@@ -92,3 +92,15 @@ function bgToggle() {
   }
   clear = !clear;
 };
+
+var yellow = 1;
+function yellowToggle() {
+  if (yellow) {
+    $('.eye')
+      .css('background', '#FF0')
+  } else {
+    $('.eye')
+      .css('background', '#FFF')
+  }
+  yellow = !yellow;
+};
